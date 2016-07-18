@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.financnikalkulacka.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:background="#BFBFBF"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:text="Future Value"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:id="@+id/firstlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView"
+        android:background="#BFBFBF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="Interest rate"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="Number of years"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="Regular payment"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="Initial amount of money"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
+                android:background="#CCD54D"
+                android:gravity="center"
+                android:onClick="resetuj"
+                android:text="RESET"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etUrokovaSazba"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:hint="%"
+                android:textColor="#BFBFBF"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etPocetObdobi"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:hint="years"
+                android:textColor="#BFBFBF"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etPravidelnaPlatba"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:hint="CZK"
+                android:textColor="#BFBFBF"
+                android:textSize="10sp" />
+
+            <EditText
+                android:id="@+id/etPocatecniJistina"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:hint="CZK"
+                android:textColor="#BFBFBF"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="#CCD54D"
+                android:gravity="center"
+                android:onClick="spocitejHodnotu"
+                android:text="OK"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/firstlinear"
+        android:layout_centerHorizontal="true"
+        android:background="#c2c2c2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtVystup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            android:allowUndo="false"
+            android:background="#ffffff"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>
