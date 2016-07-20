@@ -13,17 +13,17 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends AppCompatActivity {
-    int urokovaSazba = 0;
-    int pocetObdobi = 0;
-    int pravidelnaPlatba = 0;
-    int pocatecniJistina = 0;
+public class Main3Activity extends AppCompatActivity {
+    int numberOfYears = 0;
+    int living = 0;
+    int food = 0;
+    int fun = 0;
 
 
-    private EditText etUrokovaSazba;
-    private EditText etPocetObdobi;
-    private EditText etPravidelnaPlatba;
-    private EditText etPocatecniJistina;
+    private EditText etNumberOfYears;
+    private EditText etLiving;
+    private EditText etFood;
+    private EditText etFun;
     private Button btnOk;
     private Button btnReset;
     private TextView txtVystup;
@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etUrokovaSazba = (EditText) findViewById(R.id.etUrokovaSazba);
-        etPocetObdobi = (EditText) findViewById(R.id.etPocetObdobi);
-        etPravidelnaPlatba = (EditText) findViewById(R.id.etPravidelnaPlatba);
-        etPocatecniJistina = (EditText) findViewById(R.id.etPocatecniJistina);
+        etNumberOfYears = (EditText) findViewById(R.id.etNumberOfYears);
+        etLiving = (EditText) findViewById(R.id.etLiving);
+        etFood = (EditText) findViewById(R.id.etFood);
+        etFun = (EditText) findViewById(R.id.etFun);
         btnOk = (Button) findViewById(R.id.btnOk);
         btnReset = (Button) findViewById(R.id.btnReset);
         txtVystup = (TextView) findViewById(R.id.txtVystup);
@@ -52,26 +52,26 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void spocitejHodnotu(View view) {
-        urokovaSazba = Integer.parseInt(String.valueOf(etUrokovaSazba.getText()));
-        pocetObdobi = Integer.parseInt(String.valueOf(etPocetObdobi.getText()));
-        pravidelnaPlatba = Integer.parseInt(String.valueOf(etPravidelnaPlatba.getText()));
-        pocatecniJistina = Integer.parseInt(String.valueOf(etPocatecniJistina.getText()));
-        int urocitel = urokovaSazba + 1;
-        int futureValue = (pocatecniJistina * (urocitel ^ pocetObdobi)) + (pravidelnaPlatba * ((urocitel ^ pocetObdobi) - 1)) / (urocitel - 1);
+        numberOfYears = Integer.parseInt(String.valueOf(etNumberOfYears.getText()));
+        living = Integer.parseInt(String.valueOf(etLiving.getText()));
+        food = Integer.parseInt(String.valueOf(etFood.getText()));
+        fun = Integer.parseInt(String.valueOf(etFun.getText()));
 
-        txtVystup.setText("In " + pocetObdobi + " years you will have " + futureValue + " CZK.");
+        int futureValue = (90 - numberOfYears) * 12 * (living + food + fun);
+
+        txtVystup.setText("When you will be " + numberOfYears + " years old you need to have " + futureValue + " CZK.");
     }
 
     public void resetuj(View view) {
-        urokovaSazba = 0;
-        pocetObdobi = 0;
-        pravidelnaPlatba = 0;
-        pocatecniJistina = 0;
+        numberOfYears = 0;
+        living = 0;
+        food = 0;
+        fun = 0;
 
-        etUrokovaSazba.setText("");
-        etPocatecniJistina.setText("");
-        etPravidelnaPlatba.setText("");
-        etPocetObdobi.setText("");
+        etNumberOfYears.setText("");
+        etFun.setText("");
+        etFood.setText("");
+        etLiving.setText("");
 
     }
 
