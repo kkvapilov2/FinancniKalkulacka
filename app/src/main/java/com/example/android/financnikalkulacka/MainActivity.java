@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Called when the user clicks the Send button
      */
-    public void sendMessage1(View view) {
-        Intent intent = new Intent(this, Main3Activity.class);
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
 }

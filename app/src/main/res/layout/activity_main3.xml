@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.financnikalkulacka.MainActivity">
+    tools:context="com.example.android.financnikalkulacka.Main3Activity">
 
     <TextView
         android:id="@+id/textView"
@@ -92,7 +92,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="15dp"
-                android:background="#CCD54D"
+                android:background="@drawable/rounded_corner"
                 android:gravity="center"
                 android:onClick="resetuj"
                 android:text="RESET"
@@ -129,9 +129,9 @@
                 android:layout_gravity="center"
                 android:layout_margin="2dp"
                 android:gravity="center"
+                android:hint="How much per month you need for living?"
                 android:textColor="#CCD54D"
-                android:textSize="8sp"
-                android:hint="How much per month you need for living?"/>
+                android:textSize="8sp" />
 
             <EditText
                 android:id="@+id/etFood"
@@ -140,9 +140,9 @@
                 android:layout_gravity="center"
                 android:layout_margin="2dp"
                 android:gravity="center"
+                android:hint="How much per month you need for food?"
                 android:textColor="#CCD54D"
-                android:textSize="8sp"
-                android:hint="How much per month you need for food?"/>
+                android:textSize="8sp" />
 
             <EditText
                 android:id="@+id/etFun"
@@ -151,9 +151,9 @@
                 android:layout_gravity="center"
                 android:layout_margin="2dp"
                 android:gravity="center"
+                android:hint="How much per month you need for fun?"
                 android:textColor="#CCD54D"
-                android:textSize="8sp"
-                android:hint="How much per month you need for fun?"/>
+                android:textSize="8sp" />
 
             <Button
                 android:id="@+id/btnOk"
@@ -161,7 +161,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="#CCD54D"
+                android:background="@drawable/rounded_corner"
                 android:gravity="center"
                 android:onClick="spocitejHodnotu"
                 android:text="OK"
@@ -187,25 +187,27 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
+            android:layout_gravity="start"
             android:layout_margin="7dp"
             android:allowUndo="false"
             android:background="#ffffff"
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
-            android:padding="15dp"
+            android:paddingBottom="30dp"
+            android:textAlignment="gravity"
             android:textColor="#000000"
             android:textSize="20sp" />
     </LinearLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:background="#CCD54D"
+        android:background="@drawable/rounded_corner"
         android:gravity="center"
-        android:onClick="sendMessage1"
+        android:onClick="sendMessage"
         android:text="back to main page"
         android:textColor="#FFFFFF"
         android:textSize="15sp" />

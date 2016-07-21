@@ -91,7 +91,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="15dp"
-                android:background="#CCD54D"
+                android:background="@drawable/rounded_corner"
                 android:gravity="center"
                 android:onClick="resetuj"
                 android:text="RESET"
@@ -160,7 +160,7 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="#CCD54D"
+                android:background="@drawable/rounded_corner"
                 android:gravity="center"
                 android:onClick="spocitejHodnotu"
                 android:text="OK"
@@ -186,15 +186,16 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
+            android:layout_gravity="start"
             android:layout_margin="7dp"
             android:allowUndo="false"
             android:background="#ffffff"
+            android:paddingBottom="25dp"
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
             android:padding="15dp"
             android:textColor="#000000"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <Button
@@ -203,9 +204,9 @@
         android:layout_alignBottom="@+id/textView"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
-        android:background="#CCD54D"
+        android:background="@drawable/rounded_corner"
         android:gravity="center"
-        android:onClick="sendMessage1"
+        android:onClick="sendMessage"
         android:text="back to main page"
         android:textColor="#FFFFFF"
         android:textSize="15sp" />

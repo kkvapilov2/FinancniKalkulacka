@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
 public class Main2Activity extends AppCompatActivity {
     @Override
@@ -14,20 +13,35 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     /**
-     * Called when the user clicks the Send button
+     * Financial calculator
      */
     public void sendMessage(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * How much I need?
+     */
     public void sendMessage3(View view) {
         Intent intent = new Intent(this, Main3Activity.class);
         startActivity(intent);
     }
 
+    /**
+     * Why I should save money?
+     */
     public void sendMessage4(View view) {
         Intent intent = new Intent(this, Main4Activity.class);
+        startActivity(intent);
+    }
+
+
+    /**
+     * Advice
+     */
+    public void sendMessage5(View view) {
+        Intent intent = new Intent(this, Main5Activity.class);
         startActivity(intent);
     }
 }

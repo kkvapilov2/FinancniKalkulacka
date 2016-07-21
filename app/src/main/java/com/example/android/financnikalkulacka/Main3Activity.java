@@ -18,6 +18,7 @@ public class Main3Activity extends AppCompatActivity {
     int living = 0;
     int food = 0;
     int fun = 0;
+    int futureValue = 0;
 
 
     private EditText etNumberOfYears;
@@ -36,7 +37,7 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main3);
 
         etNumberOfYears = (EditText) findViewById(R.id.etNumberOfYears);
         etLiving = (EditText) findViewById(R.id.etLiving);
@@ -57,7 +58,7 @@ public class Main3Activity extends AppCompatActivity {
         food = Integer.parseInt(String.valueOf(etFood.getText()));
         fun = Integer.parseInt(String.valueOf(etFun.getText()));
 
-        int futureValue = (90 - numberOfYears) * 12 * (living + food + fun);
+        futureValue = (90 - numberOfYears) * 12 * (living + food + fun);
 
         txtVystup.setText("When you will be " + numberOfYears + " years old you need to have " + futureValue + " CZK.");
     }
@@ -118,8 +119,8 @@ public class Main3Activity extends AppCompatActivity {
     /**
      * Called when the user clicks the Send button
      */
-    public void sendMessage1(View view) {
-        Intent intent = new Intent(this, Main3Activity.class);
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
     }
 }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.financnikalkulacka.MainActivity">
+    tools:context="com.example.android.financnikalkulacka.Main2Activity">
 
     <TextView
         android:id="@+id/textView"
@@ -12,12 +12,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_gravity="left"
+        android:layout_gravity="center"
         android:background="#BFBFBF"
         android:fontFamily="sans-serif-thin"
-        android:gravity="left"
-        android:paddingLeft="15dp"
-        android:paddingTop="5dp"
+        android:gravity="center"
         android:text="Menu"
         android:textColor="#FFFFFF"
         android:textSize="35sp" />
@@ -36,68 +34,72 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="7dp"
             android:layout_marginLeft="7dp"
-            android:layout_marginTop="7dp"
             android:layout_weight="1"
             android:background="#FFFFFF"
+            android:gravity="center"
             android:orientation="vertical">
 
             <Button
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginEnd="5dp"
-                android:layout_marginTop="20dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/rounded_corner"
                 android:fontFamily="sans-serif-thin"
                 android:onClick="sendMessage4"
                 android:text="Why I should save money?"
-                android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginTop="10dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/rounded_corner"
                 android:fontFamily="sans-serif-thin"
                 android:onClick="sendMessage3"
                 android:text="How much I need?"
-                android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginTop="10dp"
-                android:background="#FFFFFF"
+                android:background="@drawable/rounded_corner"
                 android:fontFamily="sans-serif-thin"
                 android:onClick="sendMessage"
                 android:text="Financial Calculator"
-                android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="100dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_corner"
+                android:fontFamily="sans-serif-thin"
+                android:onClick="sendMessage5"
+                android:text="How to save some money?"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:background="#CCD54D"
-        android:gravity="center"
-        android:onClick="sendMessage1"
-        android:text="back to main page"
-        android:textColor="#FFFFFF"
-        android:textSize="15sp" />
 
 </RelativeLayout>
